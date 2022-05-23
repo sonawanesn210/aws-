@@ -8,6 +8,11 @@ const bookSchema = new mongoose.Schema({
         unique: true,
         uppercase: true,
     },
+    bookCover:{
+        type:String,
+        //required:true
+    },
+
     excerpt: {
         type: String,
         trim: true,
@@ -56,11 +61,7 @@ const bookSchema = new mongoose.Schema({
         trim:true  // format("YYYY-MM-DD")
     },
 
-    bookCover:{
-        type:String,
-        //required:true
-    }
-
+   
 
 }, { timestamps: true })
 module.exports = mongoose.model('Book', bookSchema)

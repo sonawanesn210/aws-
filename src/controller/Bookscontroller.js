@@ -202,7 +202,7 @@ const createBook = async (req, res) => {
         //upload to s3 and get the uploaded link
         // res.send the link back to frontend/postman
         let uploadedFileURL= await uploadFile( files[0] )
-        obj.bookcover=uploadedFileURL
+        obj.bookCover=uploadedFileURL
     }
     else{
         return res.status(400).send({ msg: "No file found" })
